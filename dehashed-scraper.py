@@ -47,7 +47,7 @@ class Dehashed_Scraper():
     # Save formatted results to csv and txt
     def save_results(self, company, bem, bus, bpa, bha, bor):
         # Save as CSV
-        directory = os.getcwd() + f"/{company}"
+        directory = os.getcwd() + f"/Dehashed_{company}"
         if os.path.exists(directory):
             pass
         else:
