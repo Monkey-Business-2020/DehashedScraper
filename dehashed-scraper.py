@@ -21,6 +21,9 @@ class Dehashed_Scraper():
         if "valid subscription" in response.text:
             print("\n[!] No valid subscription [!]\n")
             sys.exit()
+        elif data['entries'] == None:
+            print(f"\n[!] No Entries Found for {company} [!]\n\nExiting...\n")
+            sys.exit()
         else:
             print("\nGrabbing Leaks...")
             self.parse_results(company, data)
